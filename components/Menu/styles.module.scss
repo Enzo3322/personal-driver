@@ -9,8 +9,6 @@
         margin: 0 auto;
         padding: 20px;
 
-        img {}
-
         ul {
             list-style: none;
             display: flex;
@@ -41,5 +39,11 @@
             font-weight: 500;
             padding: 8px 30px;
         }
+    }
+}
+
+@media(max-width:40rem) {
+    .navContainer {
+        display: none;
     }
 }
