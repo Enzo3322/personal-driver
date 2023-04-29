@@ -1,0 +1,43 @@
+.testimonialContainer {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    width: 300px;
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    border: 2px solid #eee;
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .name {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #333333;
+        }
+    }
+
+    .comment {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #444;
+    }
+
+}

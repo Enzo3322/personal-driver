@@ -1,0 +1,148 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+  max-width: 1160px;
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .buttonPrimary {
+    background: linear-gradient(35deg, #FF2438, #666FCF);
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 325px;
+    width: 100%;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0 0 0;
+    width: 100%;
+
+    .textContainer {
+      max-width: 570px;
+      align-items: flex-start;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      h1 {
+        color: #333;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 52px;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        color: #555555;
+        margin-top: 30px;
+      }
+    }
+
+    .cardContainer {
+      max-width: 450px;
+      background-color: #fff;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 50px 62px;
+        border-radius: 8px;
+        box-shadow: 0px 8px 60px rgba(0, 0, 0, 0.25);
+
+        .title {
+          max-width: 275px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: 600;
+          color: #222;
+          letter-spacing: -5%;
+          line-height: 30px;
+        }
+
+        .condition {
+          font-size: 14px;
+          color: #666;
+          text-align: center;
+
+        }
+
+        .subtitle {
+          font-size: 16px;
+          text-align: center;
+
+        }
+
+        .price {
+          font-size: 36px;
+          text-align: center;
+          color: #333;
+
+        }
+
+        button {
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .about {
+    .cardContainer {
+      padding: 35px 50px;
+      box-shadow: 0px 8px 60px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      display: flex;
+      gap: 37px;
+
+      img {
+        max-width: 360px;
+        border-radius: 40px;
+      }
+
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: center;
+
+        h2 {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+        }
+
+        p {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #444444;
+        }
+
+        button {
+          font-size: 14px;
+          max-width: 204px;
+          text-align: center;
+          padding: 11px 37px;
+        }
+      }
+    }
+  }
+
+  .testimonials {}
+}
