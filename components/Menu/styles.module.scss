@@ -44,6 +44,59 @@
 
 @media(max-width:40rem) {
     .navContainer {
-        display: none;
+        position: fixed;
+        top: 0;
+        background: #fff;
+        width: 100%;
+
+        .navWrapper {
+            .menuController {
+                padding: unset;
+                background: unset;
+            }
+
+            img {
+                max-width: 60px;
+            }
+
+
+            .openContainer {
+                animation: fadeIn 0.5s;
+                background-color: #fff;
+                position: fixed;
+                left: 0;
+                top: 78px;
+                z-index: 999999999999;
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                ul {
+                    flex-direction: column;
+                    margin-left: 20px;
+                    margin-top: 30px;
+
+                    li {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                button {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        left: 500px;
+    }
+
+    100% {
+        left: 0;
     }
 }

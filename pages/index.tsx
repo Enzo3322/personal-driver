@@ -7,8 +7,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useEffect, useState } from 'react';
+import { goWhatsApp } from '@/utils/whatsapp';
 
 export default function Home() {
+  const [isMobile, setMobile] = useState(false)
+
+  useEffect(() => {
+    const navigatorData = navigator as any
+    if (navigatorData.userAgentData.mobile) {
+      setMobile(true)
+    }
+  }, [])
+
   return (
     <>
       <Head>
@@ -35,7 +46,7 @@ export default function Home() {
               <p className={styles.condition}>*Pagamento somente em dinheiro</p>
               <p className={styles.subtitle}>Valor da corrida</p>
               <h3 className={styles.price}>R$30,00</h3>
-              <button className={styles.buttonPrimary}>AGENDAR VIAGEM!</button>
+              <button className={styles.buttonPrimary} onClick={goWhatsApp}>AGENDAR VIAGEM!</button>
             </div>
           </div>
         </section>
@@ -50,41 +61,76 @@ export default function Home() {
                 detalhes e comprometimento com o serviço excepcional, você pode contar comigo para garantir
                 uma viagem tranquila e confortável
               </p>
-              <button className={styles.buttonPrimary}>AGENDAR VIAGEM!</button>
+              <button className={styles.buttonPrimary} onClick={goWhatsApp}>AGENDAR VIAGEM!</button>
             </div>
           </div>
         </section>
         <section className={styles.testimonials}>
-          <Swiper pagination={{
-            dynamicBullets: true,
-          }}
-            style={{ maxWidth: '1120px' }}
-            slidesPerView={3}
+          {isMobile ? (
+            <Swiper pagination={{
+              dynamicBullets: true,
+            }}
+              style={{ maxWidth: '360px' }}
+              slidesPerView={1}
 
-            modules={[Pagination]}>
-            <SwiperSlide>
-              <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
-            </SwiperSlide>
+              modules={[Pagination]}>
+              <SwiperSlide>
+                <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+              </SwiperSlide>
 
-          </Swiper>
+            </Swiper>
+          ) :
+            (
+              <Swiper pagination={{
+                dynamicBullets: true,
+              }}
+                style={{ maxWidth: '1120px' }}
+                slidesPerView={3}
+
+                modules={[Pagination]}>
+                <SwiperSlide>
+                  <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Testimonial name='Roberta' comment='Muito profissional!, levou meu PET para uma cirurgia e foi super simpatica e carinhosa.' />
+                </SwiperSlide>
+
+              </Swiper>
+            )}
+
         </section>
       </main>
       <footer>

@@ -153,7 +153,7 @@
     .hero {
       display: flex;
       justify-content: space-between;
-      padding: 70px 0 0 0;
+      padding: 130px 0 0 0;
       width: 100%;
       flex-direction: column;
 
@@ -230,14 +230,15 @@
     }
 
     .about {
+      width: 100%;
+
       .cardContainer {
         margin: 0 auto;
-        width: 80%;
         padding: 30px;
         border-radius: 8px;
         display: flex;
         flex-direction: column;
-        justify-content: c;
+        justify-content: center;
         gap: 37px;
 
         img {
