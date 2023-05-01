@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import styles from "./styles.module.scss"
 import { goWhatsApp } from "@/utils/whatsapp"
+import useIsMobile from "@/hooks/useDevice"
 
 const MenuDesktop = () => {
     return (
@@ -81,14 +82,7 @@ const MenuMobile = () => {
 }
 
 const Menu = () => {
-    const [isMobile, setMobile] = useState(false)
-
-    useEffect(() => {
-        const navigatorData = navigator as any
-        if (navigatorData.userAgentData.mobile) {
-            setMobile(true)
-        }
-    }, [])
+    const { isMobile } = useIsMobile()
 
     if (isMobile) return <MenuMobile />
 

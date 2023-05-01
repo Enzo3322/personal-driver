@@ -9,16 +9,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { useEffect, useState } from 'react';
 import { goWhatsApp } from '@/utils/whatsapp';
+import useIsMobile from '@/hooks/useDevice';
 
 export default function Home() {
-  const [isMobile, setMobile] = useState(false)
-
-  useEffect(() => {
-    const navigatorData = navigator as any
-    if (navigatorData.userAgentData.mobile) {
-      setMobile(true)
-    }
-  }, [])
+  const { isMobile } = useIsMobile()
 
   return (
     <>
